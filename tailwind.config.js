@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
+        lexend: ["Lexend Deca", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 };

@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!-- Tailwind CSS file -->
+  <link rel="stylesheet" href="index.css" />
+
   <title>Frontend Mentor | Stats preview card component</title>
 
   <!-- GOOGLE FONTS -->
@@ -34,35 +37,56 @@
   </style>
 </head>
 
-<body>
-  <main>
+<body class="p-8 bg-clrMain">
+  <main class="h-svh grid place-content-center">
 
-    <article>
+    <article
+      class="rounded-md bg-clrCard grid gap-4 max-w-xs overflow-hidden min-[1100px]:grid-cols-2 min-[1100px]:max-w-[1080px]	">
 
-      <picture>
-        <source srcset="./images/image-header-mobile.jpg">
-        <source srcset="./images/image-header-desktop.jpg" media="(min-width: 64rem)">
+      <picture
+        class="relative after:[''] after:absolute after:inset-0 after:w-full after:h-full after:bg-tint min-[1100px]:order-last">
+        <source srcset="./images/image-header-desktop.jpg" media="(min-width: 1100px)">
+        <img src="./images/image-header-mobile.jpg" alt="">
       </picture>
 
-      <div>
-        <h2>
-          Get insights that help your business grow.
+      <div
+        class="p-6 pb-9 min-[1100px]:px-14 min-[1100px]:py-14 min-[1100px]:pr-16 min-[1100px]:flex min-[1100px]:flex-col min-[1100px]:gap-4 min-[1100px]:order-1">
+        <h2
+          class="font-inter font-semibold text-white text-3xl text-center min-[1100px]:text-4xl min-[1100px]:text-left">
+          Get <span class="text-accent">insights</span> that help your business grow.
         </h2>
-        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        <p
+          class="font-inter text-mainParagraph text-[0.938rem]/relaxed text-center mt-4 px-2 min-[1100px]:text-left min-[1100px]:text-base/relaxed min-[1100px]:px-0">
+          Discover
+          the
+          benefits of data
+          analytics
+          and
+          make
+          better decisions
+          regarding
+          revenue, customer
           experience, and overall efficiency.</p>
 
-        <div>
-          <div>
-            <span>10k+</span>
-            <span>companies</span>
+        <div
+          class="flex flex-col gap-4 space-y-4 mt-10 min-[1100px]:flex-row min-[1100px]:justify-start min-[1100px]:items-baseline min-[1100px]:space-y-0 min-[1100px]:mt-auto min-[1100px]:gap-14">
+          <div class="space-y-1">
+            <span
+              class="font-inter font-semibold text-white block text-center text-2xl min-[1100px]:text-left min-[1100px]:tracking-wide">10k+</span>
+            <span
+              class="font-lexend text-statHeading block text-center uppercase text-[0.75rem] tracking-widest min-[1100px]:text-left">companies</span>
           </div>
-          <div>
-            <span>314</span>
-            <span>templates</span>
+          <div class="space-y-1">
+            <span
+              class="font-inter font-semibold text-white block text-center text-2xl min-[1100px]:text-left min-[1100px]:tracking-wide">314</span>
+            <span
+              class="font-lexend text-statHeading block text-center uppercase text-[0.75rem] tracking-widest min-[1100px]:text-left">templates</span>
           </div>
-          <div>
-            <span>12m+</span>
-            <span>queries</span>
+          <div class="space-y-1">
+            <span
+              class="font-inter font-semibold text-white block text-center text-2xl uppercase min-[1100px]:text-left min-[1100px]:tracking-wide">12m+</span>
+            <span
+              class="font-lexend text-statHeading block text-center uppercase text-[0.75rem] tracking-widest min-[1100px]:text-left">queries</span>
           </div>
         </div>
 
